@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Auth\LoginRequest;
+use App\Http\Requests\Auth\RegisterRequest;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
+use Validator;
 
 class LoginController extends Controller
 {
@@ -31,10 +35,16 @@ class LoginController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @return void
+     * @return \Illuminate\Validation\Validator
      */
+
+
+
+
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
     }
+
+
 }
