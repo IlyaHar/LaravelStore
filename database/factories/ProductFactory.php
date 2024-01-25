@@ -23,7 +23,7 @@ class ProductFactory extends Factory
         return [
             'title' => $title,
             'slug' => $slug,
-            'description' => fake()->sentences(rand(1, 5), true),
+            'description' => fake()->sentences(rand(1, 3), true),
             'SKU' => fake()->unique()->ean13(),
             'price' => $price,
             'new_price' => (rand(1, 5) % 2 === 0 ? fake()->randomFloat(2, 5, ($price - ($price * 0.05))) : null),
